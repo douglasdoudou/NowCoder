@@ -3,6 +3,14 @@ import java.util.Scanner;
 /**
  * @author zhuyaokunll@foxmail.com
  * @date 2018/8/21 20:27
+ * 题目描述：P为给定的二维平面整数点集。定义 P 中某点x，如果x满足 P 中任意点都
+ *         不在 x 的右上方区域内（横纵坐标都大于x），则称其为“最大的”。求出所有“最大的”
+ *         点的集合。（所有点的横坐标和纵坐标都不重复, 坐标轴范围在[0, 1e9) 内）
+ * 解题思路：
+ *        由于具体的值是由min*sum得到的，所以，可以不断更换min的值来找到最优解
+ *        1、读取数组的时候，计算sum值、寻找min值、记录min值的索引minIndex
+ *        2、将数组分为  [start,minIndex-1]  和  [minIndex+1,end]，再去按照上述方法寻找min*sum，与之前的最大值比较
+ *        3、注意递归的结束条件
  */
 public class MaxInterval {
     private static int max;
