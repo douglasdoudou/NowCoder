@@ -62,18 +62,12 @@ public class WordBreak {
         if(s==null||s.length()==0||dict==null)
             return false;
         boolean[] isRight = new boolean[s.length()+1];
+        isRight[0] = true;
         for (int i = 1; i <= s.length(); i++) {
             for (int j = 0; j <i; j++) {
                 String temp = s.substring(j,i);
-                if(j>0)
-                {
-                    if(isRight[j]&&dict.contains(temp))
-                        isRight[i] = true;
-                }else
-                {
-                    if(dict.contains(temp))
-                        isRight[i] = true;
-                }
+                if(isRight[j]&&dict.contains(temp))
+                    isRight[i] = true;
 
             }
         }
