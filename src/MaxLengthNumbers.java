@@ -14,6 +14,7 @@ public class MaxLengthNumbers {
         String  input = scanner.nextLine();
         String result = findMaxContinuousNumers(input);
         System.out.println(result);
+
     }
 
     private static String findMaxContinuousNumers(String input) {
