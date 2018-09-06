@@ -17,8 +17,6 @@ import java.util.*;
  */
 public class RMB {
     public static void main(String[] args) {
-
-
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int[] money = new int[]{1,5,10,20,50,100};
